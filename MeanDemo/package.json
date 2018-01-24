@@ -1,0 +1,23 @@
+{
+  "name": "meandemo",
+  "version": "0.0.1",
+  "description": "meanjs demo",
+  "main": "www/bin",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "meandemo"
+  ],
+  "author": "Swindy",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.1",
+    "mongoose": "^4.6.0",
+    "multiparty": "^4.1.2",
+    "request": "^2.74.0",
+    "stomp-client": "^0.8.1"
+  }
+}

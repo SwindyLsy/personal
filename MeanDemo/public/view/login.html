@@ -1,0 +1,16 @@
+<div style="border-style:solid;border-color:#DEDDDD;margin-top:10%;padding-bottom:10%;margin-left:20%;margin-right:20%;">
+<h1 align="center" style="margin-top:5%">用户登录</h1>
+<form action="LoginServlet" method="post">
+	<table style="margin:0 auto;margin-top:10%;">
+		<tr><td colspan="2"><input type="text" class=" form-control" name="username" placeholder="账号" ng-model="student.name"></td></tr>
+		<tr><td colspan="2"><input style="margin-top: 30px;" type="password" class=" form-control" name="password" placeholder="密码" ng-model="student.password"></td></tr>
+		<tr>
+			<td colspan="2" style="padding-top:20px;">
+          		<span style="color:red;">{{loginFailTip}}</span>
+ 			</td>
+ 		</tr>
+ 		<tr><td style="text-align:center"><input style="margin-top: 25px;"  type="button" value="登录" class="btn btn-default" ng-click="login(student)"></td>
+ 		<td><a style="padding-top: 25px;" href="#/register">没有账号?去注册</a></td></tr>
+	</table>
+</form>
+</div>

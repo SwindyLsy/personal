@@ -1,0 +1,40 @@
+<div style="width: 40%;margin: 0 auto;margin-top:5%;padding:20px 30px;border: solid 1px #d0d0d0;">
+<!-- <form action="RegisterServlet" method="post" enctype="multipart/form-data" style="width:80%;margin:0 auto;"> -->
+<h2>学生注册信息</h2>
+  <div class="form-group">
+    <label for="username"><span style="color:red;"> * </span>账号：
+	<!-- <c:forEach var="userNameError" items="${userNameErrorMsg}" >    -->
+          <span style="color:red;" id="userNameError">{{userNameError}}</span>
+ 	</c:forEach>
+   </label>
+    <input type="text" class="form-control" id="username" name="username" placeholder="username" ng-model="newStudent.name" required  ng-change="validateName(newStudent.name)" >
+  </div>
+  <div class="form-group">
+    <label for="password"><span style="color:red;"> * </span>密码：
+    <!-- <c:forEach var="psdError" items="${psdErrorMsg}" >    -->
+          <span style="color:red;" id="psdError">{{psdError}}</span>
+ 	<!-- </c:forEach>  -->
+  </label>
+    <input type="password" class="form-control" id="password" name="password" placeholder="Password" ng-model="newStudent.password" required ng-change="validatePsd(newStudent.password)">
+  </div>
+  <div class="form-group">
+    <label for="confirmPassword"><span style="color:red;"> * </span>确认密码：
+    <!-- <c:forEach var="confirmPsgErrorTip" items="${confirmPsgError}" >    -->
+          <span style="color:red;" id="confirmPsgErrorTip">{{confirmPsgErrorTip}}</span>
+ 	<!-- </c:forEach> -->
+  </label>
+    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required ng-model="confirmPassword" ng-change="comparePsd(newStudent.password,confirmPassword)">
+  </div>
+  <div class="form-group">
+    <label for="remark"><span style="color:red;"> * </span>简介：
+    <span style="color:red;" id="remarkTip">{{remarkTip}}</span>
+    </label>
+    <textarea class="form-control" id="remark" name="remark" ng-model="newStudent.remark" placeholder="Student decription..." required ng-change="validateRemark(newStudent.remark)"></textarea>
+  </div>
+  <!-- <c:forEach var="errorTip" items="${errorMsg}" >    -->
+          <span style="color:red;" id="errorTip"></span>  <br>
+ 	<!-- </c:forEach>  -->
+  <button type="submit" class="btn btn-default" id="submitBtn" ng-click="register(newStudent,confirmPassword)">注册</button>
+  <button type="reset" class="btn btn-default" id="resetBtn">重置</button>
+<!-- </form> -->
+</div>
